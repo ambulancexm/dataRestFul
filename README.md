@@ -1,9 +1,11 @@
 # Création d'une base de données avec SpringBootTools
 
 ## Utiliser SpringBootTools
-Il y a de nombreux tuto pour installer [SpringBootTools](https://spring.io/tools)
+Il y a de nombreux tutoriels pour installer [SpringBootTools](https://spring.io/tools)
+
 L'application est basée sur Eclipse elle permet de bien démarrer un projet
-on peut aussi utiliser [Spring Initilizr](https://start.spring.io/)
+
+On peut aussi utiliser [Spring Initilizr](https://start.spring.io/)
 
 
 ## Dans un Environement debian 10
@@ -55,4 +57,29 @@ mysql> use baseTest;
 mysql> show tables;
 
 ```
+## L'api Rest
+On peut aller chercher les valeurs inserées dans la base de données avec le lien
+[http://localhost:8080/](http://localhost:8080/)
+
+```json
+_links	
+    projet	
+      href	"http://localhost:8080/projet"
+    iot	
+      href	"http://localhost:8080/iot"
+    sonde	
+      href	"http://localhost:8080/sonde"
+    position	
+      href	"http://localhost:8080/position"
+    mesure	
+      href	"http://localhost:8080/mesure"
+    sensor	
+      href	"http://localhost:8080/sensor"
+    employee	
+      href	"http://localhost:8080/employee"
+    profile	
+      href	"http://localhost:8080/profile"
+```
+
+
 
