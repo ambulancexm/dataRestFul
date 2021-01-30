@@ -2,13 +2,13 @@
 
 ## Dans un Environement debian 10
 
-** Installer mysql 
+* Installer mysql 
 ``` terminal
 sudo apt install mariadb
 ```
 
-** créer et donner les droit à un utilisateur et créer la base de données 
-``` terminal
+* créer et donner les droit à un utilisateur et créer la base de données 
+`` use terminal
 mysql -u root
 mysql> CREATE USER 'user1'@localhost IDENTIFIED BY 'password1';
 mysql> GRANT ALL PRIVILEGES ON *.* TO 'user1'@localhost IDENTIFIED BY 'password1';
@@ -16,23 +16,23 @@ mysql> FLUSH PRIVILEGES;
 mysql> exit
 mysql -u user1 -p
 mysql> CREATE DATABASE baseTest;
-```
-** install java
+``
+* install java
 ``` terminal
 sudo apt install default-jdk
 ```
 
-** install maven
+* install maven
 ``` terminal
 sudo apt install default-jdk
 ```
 
-** installer les sources
+* installer les sources
 ``` terminal
 git clone https://github.com/ambulancexm/dataRestFul.git
 ```
 
-** compiler avec maven  
+* compiler avec maven  
 ``` terminal
 mvn install
 ```
