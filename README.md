@@ -1,21 +1,52 @@
-# dataRestFul
+# Création d'une base de données avec springBootTools
 
-sur debian 10
+## Dans un Environement debian 10
 
-install mysql 
-creer une base de données baseTest
+** Installer mysql 
+``` terminal
+sudo apt install mariadb
+```
 
-install default-jdk
+** créer et donner les droit à un utilisateur et créer la base de données 
+``` terminal
+mysql -u root
+mysql> CREATE USER 'user1'@localhost IDENTIFIED BY 'password1';
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'user1'@localhost IDENTIFIED BY 'password1';
+mysql> FLUSH PRIVILEGES;
+mysql> exit
+mysql -u user1 -p
+mysql> CREATE DATABASE baseTest;
+```
+** install java
+``` terminal
+sudo apt install default-jdk
+```
 
-install maven
+** install maven
+``` terminal
+sudo apt install default-jdk
+```
 
-lancer mvn install
+** installer les sources
+``` terminal
+git clone https://github.com/ambulancexm/dataRestFul.git
+```
 
+** compiler avec maven  
+``` terminal
+mvn install
+```
+
+** lancer le fichier compilé
+``` terminal
 java -jar target/<fichier-compilé>
+```
 
-la base de données est remplie par hibernate
+maintenant on peut verifier si la base de données a bien été remplie par hibernate 
+``` terminal
+mysql -u user1 -p
+mysql> use baseTest;
+mysql> show tables;
 
-dans mysql
+```
 
-use baseTest;
-show tables;
