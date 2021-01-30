@@ -7,7 +7,7 @@
 sudo apt install mariadb
 ```
 
-* créer et donner les droit à un utilisateur et créer la base de données 
+* Créer et donner les droit à un utilisateur et créer la base de données 
 ```bash
 mysql -u root
 mysql> CREATE USER 'user1'@localhost IDENTIFIED BY 'password1';
@@ -17,32 +17,32 @@ mysql> exit
 mysql -u user1 -p
 mysql> CREATE DATABASE baseTest;
 ```
-* install java
+* Install java
 ```bash
 sudo apt install default-jdk
 ```
 
-* install maven
+* Install maven
 ```bash
 sudo apt install default-jdk
 ```
 
-* installer les sources
+* Installer les sources
 ```bash
 git clone https://github.com/ambulancexm/dataRestFul.git
 ```
 
-* compiler avec maven  
+* Compiler avec maven  
 ```bash
 mvn install
 ```
 
-** lancer le fichier compilé
+* Lancer le fichier compilé
 ``` terminal
 java -jar target/<fichier-compilé>
 ```
 
-maintenant on peut verifier si la base de données a bien été remplie par hibernate 
+Maintenant on peut verifier si la base de données a bien été remplie par hibernate. 
 ```bash
 mysql -u user1 -p
 mysql> use baseTest;
