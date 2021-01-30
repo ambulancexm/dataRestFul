@@ -32,7 +32,7 @@ sudo apt install default-jdk
 
 * Install maven
 ```bash
-sudo apt install default-jdk
+sudo apt install maven
 ```
 
 * Installer les sources
